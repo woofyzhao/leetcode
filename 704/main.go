@@ -18,6 +18,22 @@ func search(nums []int, target int) int {
 	return -1
 }
 
+func search2(nums []int, target int) int {
+	a, b := 0, len(nums)-1
+	for a <= b {
+		m := (a + b) >> 1
+		if nums[m] == target {
+			return m
+		}
+		if nums[m] > target {
+			b = m - 1
+		} else {
+			a = m + 1
+		}
+	}
+	return -1
+}
+
 func main() {
 	nums := []int{-1, 0, 3, 5, 9, 12}
 	fmt.Println(search(nums, 9))

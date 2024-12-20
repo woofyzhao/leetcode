@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-//first attempt, DP, AC
+// first attempt, DP, AC
 func numberOfArithmeticSlices_1(A []int) (result int) {
 
 	n := len(A)
@@ -46,8 +46,8 @@ func numberOfArithmeticSlices(A []int) (result int) {
 	for i := n - 1; i >= 0; i-- {
 		for j := i + 1; j < n; j++ {
 			delta := A[j] - A[i]
-			count[i][delta] += count[j][delta] + 1 //the extra 1 is (i, j)
-			result += count[j][delta]              //guaranteed to have len>=3 from i
+			count[i][delta] += count[j][delta] + 1 //the extra 1-2sum is (i, j)
+			result += count[j][delta]              //guaranteed to have len>=3-longest-substring-without-repeating-characters from i
 		}
 	}
 	return

@@ -25,6 +25,6 @@ func partitionLabels(S string) (result []int) {
 
 func main() {
 	fmt.Println(partitionLabels("ababcbacadefegdehijhklij"))
-	fmt.Println(partitionLabels("1"))
+	fmt.Println(partitionLabels("1-2sum"))
 	fmt.Println(partitionLabels("ababcbaxcadefegdehijxhwwvvsy"))
 }

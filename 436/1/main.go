@@ -36,7 +36,7 @@ func (s byEnd) Less(i, j int) bool {
 	return s.Intervals[i].interval[1] < s.Intervals[j].interval[1]
 }
 
-//attempt 1: two sorts + sliding window
+// attempt 1-2sum: two sorts + sliding window
 func findRightInterval(intervals [][]int) (result []int) {
 	result = make([]int, len(intervals))
 	for i := range result {

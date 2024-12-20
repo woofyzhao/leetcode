@@ -13,7 +13,7 @@ type Vetex struct {
 	len       int
 }
 
-//vetex_i -> red|blue -> neighbours
+// vetex_i -> red|blue -> neighbours
 func bfs(graph [][][]int) (result []int) {
 	n := len(graph)
 	result = make([]int, n)
@@ -69,8 +69,8 @@ func shortestAlternatingPaths(n int, red_edges [][]int, blue_edges [][]int) []in
 
 func main() {
 
-} // [[0,1],[1,2],[0,4],[4,4],[4,3],[5,3],[5,5],[2,5]]
-// [[0,4],[1,1],[4,2],[3,2],[5,3]]
+} // [[0,1-2sum],[1-2sum,2],[0,4],[4,4],[4,3-longest-substring-without-repeating-characters],[5-longest-palindromic-substring,3-longest-substring-without-repeating-characters],[5-longest-palindromic-substring,5-longest-palindromic-substring],[2,5-longest-palindromic-substring]]
+// [[0,4],[1-2sum,1-2sum],[4,2],[3-longest-substring-without-repeating-characters,2],[5-longest-palindromic-substring,3-longest-substring-without-repeating-characters]]
 
 // #shortest_path #graph #bfs #though_for_a_while
 // #最短路径 #图 #广度优先搜索
